@@ -15,8 +15,13 @@
 <body>
   <div class="container">
     <%- include('./common/head.ejs')%>
-      <div class="lv-main">主体</div>
-      <div class="lv-foot">底部</div>
+      <div class="lv-main">
+        <%- include('./common/menu.ejs')%>
+          <div class="body">
+            首页
+          </div>
+      </div>
+      <%- include('./common/foot.ejs')%>
   </div>
 </body>
 
