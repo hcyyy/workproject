@@ -3,7 +3,7 @@ html,body{
     height: 100%;
 }
 body{
-    background: #ccc;
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#3eced8), to(#7e2ac4));
 }
 .container{
     height: 100%;
@@ -22,8 +22,11 @@ body{
     text-decoration: none;
     }
     .right{
+    width: 130px;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-around;
     }
 }
 
@@ -49,6 +52,21 @@ body{
         border-bottom: 1px solid #000;
         a{
             text-decoration: none;
+            .tocnumber{
+                font-size: 9px;
+                width: 20px;
+                line-height: 20px;
+                height: 20px;
+                margin-right: 5px;
+                border-bottom: none;
+                border: 1px solid #8a8a8a;
+                background-color: transparent;
+                display: inline-block;
+                color: #8a8a8a;
+                text-align: center;
+                text-decoration: none;
+                border-radius: 5px;
+            }
         }
     }
 }
@@ -60,6 +78,24 @@ body{
     .body{
         flex: 1;
         padding: 0 20px;
+        position: relative;
+    }
+}
+
+.table > thead > tr:first-child > th{
+    width: 130px;
+}
+
+
+.table-bordered > tbody > tr > .tupian{
+    width: 100px;
+    height: 128px;
+    padding: 2px;
+    text-align: center;
+    img{
+        width: 100px;
+        height: 100%;
+        margin: 0;
     }
 }
 
@@ -77,5 +113,7 @@ body{
 }
 
 .pagination{
-    float: right;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }
