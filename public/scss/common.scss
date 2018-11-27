@@ -49,8 +49,10 @@ body{
         height: 50px;
         line-height: 50px;
         text-align: center;
+        color: black;
         border-bottom: 1px solid #000;
         a{
+            color: black;
             text-decoration: none;
             .tocnumber{
                 font-size: 9px;
@@ -62,12 +64,63 @@ body{
                 border: 1px solid #8a8a8a;
                 background-color: transparent;
                 display: inline-block;
-                color: #8a8a8a;
+                color: black;
                 text-align: center;
                 text-decoration: none;
                 border-radius: 5px;
             }
+            .tocnumber{
+                background: #ffffff;
+            }
         }
+    }
+}
+.lv-menu>li:first-child{
+    background: rgb(11, 211, 11);
+    a:hover>.tocnumber{
+        background: rgb(11, 211, 11);
+    }
+}
+
+.lv-menu>li:nth-child(2){
+    background: rgb(240, 11, 3);
+    a:hover>.tocnumber{
+        background: rgb(240, 11, 3);
+    }
+}
+
+.lv-menu>li:nth-child(3){
+    background: rgb(38, 208, 238);
+    a:hover>.tocnumber{
+        background: rgb(38, 208, 238);
+    }
+}
+
+.lv-menu>li:nth-child(4){
+    background: rgb(168, 98, 7);
+    a:hover>.tocnumber{
+        background: rgb(168, 98, 7);
+    }
+}
+
+.lv-menu>li:nth-child(5){
+    background: rgb(255, 251, 0);
+    a:hover>.tocnumber{
+        background: rgb(255, 251, 0);
+    }
+}
+
+.lv-menu>li:nth-child(6){
+    background: rgba(22, 22, 1, 0.856);
+    a:hover>.tocnumber{
+        background: rgba(22, 22, 1, 0.856);
+    }
+}
+
+.lv-menu>li:nth-child(7){
+    background:linear-gradient(to right,#11c93f,#167fe0,#da31a7);
+    a:hover>.tocnumber{
+        background:linear-gradient(to right,#11c93f,#167fe0,#da31a7);
     }
 }
 
@@ -78,18 +131,22 @@ body{
     .body{
         flex: 1;
         padding: 0 20px;
+        background: url(../images/sjm.jpg) no-repeat;
+        background-size: 80% 80%;
+        background-position: 40% 35%;
+        opacity:0.7;
         position: relative;
     }
 }
 
-.table > thead > tr:first-child > th{
-    width: 130px;
-}
+// .table > thead > tr:first-child > th{
+//     width: 130px;
+// }
 
 
 .table-bordered > tbody > tr > .tupian{
     width: 100px;
-    height: 128px;
+    height: 124px;
     padding: 2px;
     text-align: center;
     img{
@@ -116,4 +173,5 @@ body{
     position: absolute;
     bottom: 10px;
     right: 10px;
+    margin: 10px 0 0;
 }

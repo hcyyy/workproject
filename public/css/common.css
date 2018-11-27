@@ -48,9 +48,11 @@ body {
   height: 50px;
   line-height: 50px;
   text-align: center;
+  color: black;
   border-bottom: 1px solid #000;
 }
 .lv-menu li a {
+  color: black;
   text-decoration: none;
 }
 .lv-menu li a .tocnumber {
@@ -63,10 +65,62 @@ body {
   border: 1px solid #8a8a8a;
   background-color: transparent;
   display: inline-block;
-  color: #8a8a8a;
+  color: black;
   text-align: center;
   text-decoration: none;
   border-radius: 5px;
+}
+.lv-menu li a .tocnumber {
+  background: #ffffff;
+}
+
+.lv-menu > li:first-child {
+  background: #0bd30b;
+}
+.lv-menu > li:first-child a:hover > .tocnumber {
+  background: #0bd30b;
+}
+
+.lv-menu > li:nth-child(2) {
+  background: #f00b03;
+}
+.lv-menu > li:nth-child(2) a:hover > .tocnumber {
+  background: #f00b03;
+}
+
+.lv-menu > li:nth-child(3) {
+  background: #26d0ee;
+}
+.lv-menu > li:nth-child(3) a:hover > .tocnumber {
+  background: #26d0ee;
+}
+
+.lv-menu > li:nth-child(4) {
+  background: #a86207;
+}
+.lv-menu > li:nth-child(4) a:hover > .tocnumber {
+  background: #a86207;
+}
+
+.lv-menu > li:nth-child(5) {
+  background: #fffb00;
+}
+.lv-menu > li:nth-child(5) a:hover > .tocnumber {
+  background: #fffb00;
+}
+
+.lv-menu > li:nth-child(6) {
+  background: rgba(22, 22, 1, 0.856);
+}
+.lv-menu > li:nth-child(6) a:hover > .tocnumber {
+  background: rgba(22, 22, 1, 0.856);
+}
+
+.lv-menu > li:nth-child(7) {
+  background: linear-gradient(to right, #11c93f, #167fe0, #da31a7);
+}
+.lv-menu > li:nth-child(7) a:hover > .tocnumber {
+  background: linear-gradient(to right, #11c93f, #167fe0, #da31a7);
 }
 
 .lv-main {
@@ -77,16 +131,16 @@ body {
 .lv-main .body {
   flex: 1;
   padding: 0 20px;
+  background: url(../images/sjm.jpg) no-repeat;
+  background-size: 80% 80%;
+  background-position: 40% 35%;
+  opacity: 0.7;
   position: relative;
-}
-
-.table > thead > tr:first-child > th {
-  width: 130px;
 }
 
 .table-bordered > tbody > tr > .tupian {
   width: 100px;
-  height: 128px;
+  height: 124px;
   padding: 2px;
   text-align: center;
 }
@@ -112,6 +166,7 @@ body {
   position: absolute;
   bottom: 10px;
   right: 10px;
+  margin: 10px 0 0;
 }
 
 /*# sourceMappingURL=common.css.map */
