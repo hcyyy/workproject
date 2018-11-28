@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <script src="/js/jquery.js"></script>
     <div class="container">
         <%- include('./common/head.ejs')%>
             <div class="lv-main">
@@ -27,10 +28,11 @@
                                     <th>年龄</th>
                                     <th>性别</th>
                                     <th>是否管理员</th>
+                                    <th>操作</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <% for(var i=0;i<list.length;i++) {%>
+                                <% for(var i=0;i<list.length;i++){ %>
                                     <tr>
                                         <th scope="row">
                                             <%=i+1%>
@@ -50,6 +52,12 @@
                                         <td>
                                             <%= list[i].isAdmin %>
                                         </td>
+                                        <td>
+                                            <% if(!list[i].isAdmin){ %>
+                                                <a href="/users/delete?id=<%= list[i]._id%>">删除</a>
+                                                <% } %>
+
+                                        </td>
                                     </tr>
                                     <%}%>
                             </tbody>
@@ -62,26 +70,17 @@
                                         <span aria-hidden="true">&laquo;</span>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#">1</a>
-                                </li>
-                                <li>
-                                    <a href="#">2</a>
-                                </li>
-                                <li>
-                                    <a href="#">3</a>
-                                </li>
-                                <li>
-                                    <a href="#">4</a>
-                                </li>
-                                <li>
-                                    <a href="#">5</a>
-                                </li>
-                                <li>
-                                    <a href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
+                                <% for(var i=0;i<totalpage;i++){ %>
+                                    <li class="<%= currentpage==(i+1)?'active':''%>">
+                                        <a href="#">1</a>
+                                        <%= i+1%>
+                                    </li>
+                                    <% } %>
+                                        <li>
+                                            <a href="#" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
                             </ul>
                         </nav>
                     </div>

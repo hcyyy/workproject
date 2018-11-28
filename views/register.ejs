@@ -14,7 +14,7 @@
 
 <body>
     <div class="container">
-        <form action="/users/login" method="POST" class="form-inline">
+        <form action="/users/register" method="POST" class="form-inline">
             <label>
                 <span>用户名:</span>
                 <input type="text" name="name" placeholder="请输入用户名" class="form-control">
@@ -25,8 +25,25 @@
                 <input type="password" name="pwd" placeholder="请输入密码" class="form-control">
             </label>
             <div class="mmts"></div>
-            <input type="submit" value="登录" class="btn btn-default">
-            <a href="/register.html">立即注册</a>
+            <label>
+                <span>昵　称:</span>
+                <input type="text" name="nickname" placeholder="请输入昵称" class="form-control">
+            </label>
+            <label>
+                <span>年　龄:</span>
+                <input type="text" name="age" placeholder="请输入年龄" class="form-control">
+            </label>
+            <label>
+                <span>性　别:</span>
+                <input type="radio" name="sex" value="男" checked>男
+                <input type="radio" name="sex" value="女">女
+            </label>
+            <label>
+                <span>管理员:</span>
+                <input type="radio" name="isAdmin" value="是">是
+                <input type="radio" name="isAdmin" value="否" checked>否
+            </label>
+            <input type="submit" value="注册" class="btn btn-default">
         </form>
 
     </div>
