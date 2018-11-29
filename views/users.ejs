@@ -66,18 +66,20 @@
                         <nav>
                             <ul class="pagination">
                                 <li>
-                                    <a href="#" aria-label="Previous">
+                                    <a href="/users?page=<%= currentpage-1<1?1:currentpage-1%>&pageSize=<%= pageSize%>" aria-label="Previous">
                                         <span aria-hidden="true">&laquo;</span>
                                     </a>
                                 </li>
                                 <% for(var i=0;i<totalpage;i++){ %>
                                     <li class="<%= currentpage==(i+1)?'active':''%>">
-                                        <a href="#">1</a>
-                                        <%= i+1%>
+                                        <a href="/users?page=<%= i+1%>&&pageSize=<%= pageSize%>">
+                                            <%= i+1%>
+                                        </a>
+
                                     </li>
                                     <% } %>
                                         <li>
-                                            <a href="#" aria-label="Next">
+                                            <a href="/users?page=<%= currentpage+1>totalpage?totalpage:currentpage+1%>&pageSize=<%= pageSize%>" aria-label="Next">
                                                 <span aria-hidden="true">&raquo;</span>
                                             </a>
                                         </li>

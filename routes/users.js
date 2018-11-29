@@ -53,6 +53,7 @@ router.get('/', function (req, res, next) {
         res.render('users', {
           list: result[1],
           totalpage: totalpage,
+          pageSize: pageSize,
           currentpage: page
         })
       }
